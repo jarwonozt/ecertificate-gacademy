@@ -170,7 +170,29 @@
                 </div>
             @else
                 <div class="doc_features_inner p-4">
-                    {{ $data['data']['certificate']['user']['name'] }}
+                    <div class="media doc_features_item wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="0.5s">
+                        <img src="{{asset('assets')}}/img/new/icon1.png" alt="">
+                        <div class="media-body">
+                            <a href="#">
+                                <h4>{{ $data['data']['certificate']['user']['name'] }}</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="media doc_features_item wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.6s">
+                        <img src="{{asset('assets')}}/img/new/icon2.png" alt="">
+                        <div class="media-body">
+                            <a href="#">
+                                <h4>{{ strtoupper($data['data']['certificate']['class']['name']) }}</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="media doc_features_item wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.7s">
+                        <div class="media-body">
+                            <a class="btn action_btn thm_btn"  href="{{ $data['data']['certificate']['download'] }}">
+                                Download
+                            </a>
+                        </div>
+                    </div>
                 </div>
             @endif
         </div>
