@@ -13,7 +13,7 @@
         </ul>
         <div class="container">
             <div class="doc_banner_content">
-                <h2 class="wow fadeInUp">How can we help you?</h2>
+                <h2 class="wow fadeInUp">Find your certificate now</h2>
                 <p class="wow fadeInUp" data-wow-delay="0.2s">Enter the certificate code here</p>
                 <form class="header_search_form">
                     <div class="header_search_form_info">

@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg menu_one menu_purple sticky-nav">
     <div class="container">
         <a class="navbar-brand header_logo" href="index.html">
-            <img class="first_logo sticky_logo" src="{{asset('assets')}}/img/logo.png" srcset="{{asset('assets')}}/img/logo-2x.png 2x" alt="logo">
-            <img class="white_logo main_logo" src="{{asset('assets')}}/img/logo-w.png" srcset="{{asset('assets')}}/img/logo-w2x.png 2x" alt="logo">
+            <img class="first_logo sticky_logo" src="{{asset('assets')}}/img/logo.png" srcset="{{asset('assets')}}/img/logo-2x.png" alt="logo">
+            <img class="white_logo main_logo" src="{{asset('assets')}}/img/logo-w.png" srcset="{{asset('assets')}}/img/logo-w2x.png" alt="logo">
         </a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
