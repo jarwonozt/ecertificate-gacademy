@@ -56,7 +56,7 @@
     <script src="{{asset('assets')}}/assets/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="{{asset('assets')}}/assets/magnify-pop/jquery.magnific-popup.min.js"></script>
     <script src="{{asset('assets')}}/js/plugins.js"></script>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    {{-- <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script> --}}
     <script src="{{asset('assets')}}/js/main.js"></script>
 </body>
 </html>

@@ -12,6 +12,10 @@ class CertificateSearch extends Component
     protected $updatesQueryString = ['search'=> ['except' => '']];
 
 
+    public function mount(){
+        $this->search = null;
+    }
+
     public function render()
     {
 
