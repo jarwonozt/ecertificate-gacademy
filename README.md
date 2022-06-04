@@ -7,7 +7,7 @@
 #### Get all items
 
 ```http
-  GET https://g-academy.net/api/certificate
+  GET https://g-academy.net/api/v1/public/certificate
 ```
 
 
@@ -19,13 +19,13 @@
 #### Example
 
 ```http
-  GET https://g-academy.net/api/certificate/ABwd21
+  GET https://g-academy.net/api/v1/public/certificate/ABwd21
 ```
 ```http
-  GET https://g-academy.net/api/certificate/coinima
+  GET https://g-academy.net/api/v1/public/certificate/coinima
 ```
 ```http
-  GET https://g-academy.net/api/certificate/DEMO PREMIUM CLASS
+  GET https://g-academy.net/api/v1/public/certificate/DEMO PREMIUM CLASS
 ```
 
 ## Demo
