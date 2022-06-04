@@ -13,13 +13,19 @@
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `code`      | `string` | **Required**. important to check valid certificate |
+| `code or username or class name`      | `string` | **Required**. important to check valid certificate |
 
 
 #### Example
 
 ```http
   GET https://g-academy.net/api/certificate/ABwd21
+```
+```http
+  GET https://g-academy.net/api/certificate/coinima
+```
+```http
+  GET https://g-academy.net/api/certificate/DEMO PREMIUM CLASS
 ```
 
 ## Demo
