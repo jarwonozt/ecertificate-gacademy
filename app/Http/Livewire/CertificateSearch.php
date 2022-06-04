@@ -8,9 +8,13 @@ use Illuminate\Support\Facades\Http;
 class CertificateSearch extends Component
 {
     public $search;
-    // protected $queryString = ['search'=> ['except' => '']];
     protected $updatesQueryString = ['search'=> ['except' => '']];
+    public $readyToLoad = false;
 
+    public function loadPosts()
+    {
+        $this->readyToLoad = true;
+    }
 
     public function mount(){
         $this->search = null;
@@ -26,6 +30,7 @@ class CertificateSearch extends Component
 
             if($certificate->successful()){
                 $data = $certificate->json();
+                // dd($data);
                 // dd($certificate->json());
                 // dd($data['data']['certificate']['user']['name']);
             }else{
@@ -34,6 +39,10 @@ class CertificateSearch extends Component
         }
 
 
-        return view('livewire.certificate-search', ['data' => $data]);
+        return view('livewire.certificate-search',
+        [
+            'data' => $this->readyToLoad ? $data : [],
+        ]
+        );
     }
 }
