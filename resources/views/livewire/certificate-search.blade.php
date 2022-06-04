@@ -49,7 +49,7 @@
                 </div>
             @endif
 
-            @if (empty($data))
+            @if (empty($data) || $data == null)
                 <div class="doc_features_inner mt-2 p-4">
                     <div class="media wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="0.8s">
                         <img src="{{asset('assets')}}/img/new/icon8.png" alt="" style="margin-right:10px;">
@@ -57,35 +57,40 @@
                     </div>
                 </div>
             @else
-            @foreach ($data['data'] as $k=>$v)
+                @if(isset($data))
+                    @forelse ($data['data'] as $k=>$v)
 
-                <div class="doc_features_inner p-4 mt-1">
-                    <div class="media doc_features_item wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="0.5s">
-                        <img src="{{asset('assets')}}/img/new/icon1.png" alt="">
-                        <div class="media-body">
-                            <a href="#">
-                                <h4>{{ $v['certificate']['user']['name'] }}</h4>
-                            </a>
+                        <div class="doc_features_inner p-4 mt-1">
+                            <div class="media doc_features_item wow fadeInUp" data-wow-delay="0.1s" data-wow-duration="0.5s">
+                                <img src="{{asset('assets')}}/img/new/icon1.png" alt="">
+                                <div class="media-body">
+                                    <a href="#">
+                                        <h4>{{ $v['certificate']['user']['name'] }}</h4>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="media doc_features_item wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.6s">
+                                <img src="{{asset('assets')}}/img/new/icon2.png" alt="">
+                                <div class="media-body">
+                                    <a href="#">
+                                        <h4>{{ strtoupper($v['certificate']['class']['name']) }}</h4>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="media doc_features_item wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.7s">
+                                <img src="{{asset('assets')}}/img/new/icon3.png" alt="">
+                                <div class="media-body">
+                                    <a class="btn action_btn thm_btn"  href="{{ $v['certificate']['download'] }}">
+                                        Download
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="media doc_features_item wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.6s">
-                        <img src="{{asset('assets')}}/img/new/icon2.png" alt="">
-                        <div class="media-body">
-                            <a href="#">
-                                <h4>{{ strtoupper($v['certificate']['class']['name']) }}</h4>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="media doc_features_item wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.7s">
-                        <img src="{{asset('assets')}}/img/new/icon3.png" alt="">
-                        <div class="media-body">
-                            <a class="btn action_btn thm_btn"  href="{{ $v['certificate']['download'] }}">
-                                Download
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
+                    @empty
+                        <p>No users</p>
+                    @endforelse
+
+                @endif
             @endif
         </div>
     </section>

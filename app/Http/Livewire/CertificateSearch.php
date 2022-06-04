@@ -26,22 +26,18 @@ class CertificateSearch extends Component
         $data = array();
 
         if ($this->search !== null) {
-            $certificate = Http::get('https://g-academy.net/api/certificate/'.$this->search);
+            $certificate = Http::get('https://g-academy.net/api/v1/public/certificate/key/'.$this->search);
 
             if($certificate->successful()){
                 $data = $certificate->json();
-                // dd($data);
-                // dd($certificate->json());
-                // dd($data['data']['certificate']['user']['name']);
             }else{
                 $data = 0;
             }
         }
 
-
         return view('livewire.certificate-search',
         [
-            'data' => $this->readyToLoad ? $data : [],
+            'data' => $data,
         ]
         );
     }
