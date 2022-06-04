@@ -19,13 +19,13 @@
 #### Example
 
 ```http
-  GET https://g-academy.net/api/v1/public/certificate/ABwd21
+  GET https://g-academy.net/api/v1/public/certificate/key/ABwd21
 ```
 ```http
-  GET https://g-academy.net/api/v1/public/certificate/coinima
+  GET https://g-academy.net/api/v1/public/certificate/key/coinima
 ```
 ```http
-  GET https://g-academy.net/api/v1/public/certificate/DEMO PREMIUM CLASS
+  GET https://g-academy.net/api/v1/public/certificate/key/DEMO PREMIUM CLASS
 ```
 
 ## Demo
